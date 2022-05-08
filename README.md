@@ -29,5 +29,13 @@ Plug in connector on the right-side Joy Con and connect to PC. Use WinDbg serial
 - Sideband buttons as input device
 - Joy-Con (maybe not. Need high speed serial)
 
-## Building
-See [Lumia950XLPkg](https://github.com/WOA-Project/Lumia950XLPkg). Almost identical!
+## Building Instructions
+- https://github.com/WolfLink115/NintendoSwitchPkg/blob/master/buildinstructions.txt
+# Special thanks to
+
+- Imbushuo for making the EDK2 Package and editing Coreboot sources to work with display, as well as helping me with errors I had faced.
+
+- Fail0verflow for making the shofel2 exploit and Switch Coreboot sources.
+
+- The entirety of the Switch modding team for making this possible.
+
