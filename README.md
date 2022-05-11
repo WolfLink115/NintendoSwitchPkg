@@ -45,11 +45,11 @@ Plug in connector on the right-side Joy Con and connect to PC. Use WinDbg serial
 - git clone https://github.com/fail0verflow/shofel2.git
 - git clone https://github.com/WolfLink115/Coreboot.git --recursive
 - git clone https://github.com/tianocore/edk2.git --recursive
-    ### Clone Brotli Inside of edk2 BaseTools and MdeModulePkg if it didn't when cloning
-        - rm -rf edk2/BaseTools/Source/C/BrotliCompress/brotli && git clone https://github.com/google/brotli.git edk2 BaseTools/Source/C/BrotliCompress
+    ### Clone NintendoSwitchPkg inside of the EDK2 source
+    - https://github.com/imbushuo/NintendoSwitchPkg.git
+        ### Clone Brotli Inside of edk2 BaseTools and MdeModulePkg if it didn't when cloning
+        - rm -rf edk2/BaseTools/Source/C/BrotliCompress/brotli && git clone https://github.com/google/brotli.git edk2/BaseTools/Source/C/BrotliCompress
         - rm -rf edk2/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli && git clone https://github.com/google/brotli.git
-            ### Clone NintendoSwitchPkg inside of the EDK2 source
-                - https://github.com/imbushuo/NintendoSwitchPkg.git
 
 ## Build ShofEL2 exploit, EDK2, and Coreboot
 - cd shofel2/exploit && make
@@ -62,6 +62,7 @@ Plug in connector on the right-side Joy Con and connect to PC. Use WinDbg serial
 ## After all that we should now have a coreboot.rom file in the build folder. Now we can try to boot edk2.
 - cd ../shofel2/exploit
 - sudo ./shofel2.py cbfs.bin ../../Coreboot/build/coreboot.rom
+
 ### If all went well, your Nintendo Switch should now be booting EDK2. Thank you for reading!
 
 ### If you run into a USB error, and you are using USB2.0, try using a USB3.0 port. If your pc doesn't have a USB3.0 port, there is a .patch file in the shofel2 source that you apply to your kernel. That will allow USB2.0 to work with shofel2. If you don't want to do that, or you just want to make things easier on yourself, you can use tegrarcmsmash.exe on a Windows install.
