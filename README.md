@@ -32,7 +32,7 @@ Plug in connector on the right-side Joy Con and connect to PC. Use WinDbg serial
 # Building Instructions
 
 ## Install dependencies
-- sudo apt-get install build-essential uuid-dev iasl git python3-distutils gcc-arm-linux-gnueabi gcc-aarch64-linux-gn
+- sudo apt-get install build-essential uuid-dev iasl git python3-distutils gcc-arm-linux-gnueabi gcc-aarch64-linux-gnu
     ### Install Powershell
     - sudo apt-get update
     - sudo apt-get install -y wget apt-transport-https software-properties-common
@@ -47,9 +47,6 @@ Plug in connector on the right-side Joy Con and connect to PC. Use WinDbg serial
 - git clone https://github.com/tianocore/edk2.git --recursive
     ### Clone NintendoSwitchPkg inside of the EDK2 source
     - https://github.com/WolfLink115/NintendoSwitchPkg.git
-    ### Clone Brotli Inside of edk2 BaseTools and MdeModulePkg if it didn't when cloning
-    - `rm -rf edk2/BaseTools/Source/C/BrotliCompress/brotli && git clone https://github.com/google/brotli.git edk2/BaseTools/Source/C/BrotliCompress`
-    - `rm -rf edk2/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli && git clone https://github.com/google/brotli.git`
 
 ## Build ShofEL2 exploit, EDK2, and Coreboot
 - cd shofel2/exploit && make
